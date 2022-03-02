@@ -12,7 +12,7 @@ import {
 
 const router = express.Router()
 
-router.post('/', auth, content('multipart/form-data'), upload, checkout)
+router.post('/', auth, content('application/json'), upload, checkout)
 router.get('/me', auth, getMyOrders)
 router.get('/all', auth, admin, getAllOrders)
 
